@@ -56,16 +56,14 @@
             </div>
             <div class="card-body">
               <!-- Imagem dado -->
-              <img src="dados.jpg" alt="Dados" id="dados-img" class="img-fluid">
-
+              <img id="myImage" src="assets/images/dados.jpg" alt="Sortear">
               <!-- Botão -->
-              <button type="button" data-audiourl="dados.mp3" class="btnPlayAudio w-100 btn btn-lg btn-primary"
-                onclick="sortear()">Sortear
+              <button type="button" data-audiourl="assets/audio/dados.mp3"
+                class="btnPlayAudio w-100 btn btn-lg btn-primary" onclick="sortear(); changeImage()">Sortear
               </button>
 
               <!-- Resultado da rolagem -->
-              <div class="btnPlayAudio list-unstyled mt-3 mb-4" id="resultado" style="text-align: center;"
-                class="fs-5 text-muted">
+              <div class="list-unstyled mt-3 mb-4" id="resultado" style="text-align: center;" class="fs-5 text-muted">
               </div>
 
             </div>
@@ -81,7 +79,7 @@
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <!-- Script do sorteador -->
-  <script src="dados.js"></script>
+  <script src="js/dados.js"></script>
 </body>
 
 </html>

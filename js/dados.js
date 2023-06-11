@@ -3,10 +3,17 @@ var dado1;
 var dado2;
 var dado3;
 
+function changeImage() {
+  document.getElementById("myImage").src = "assets/images/dados.gif";
+  setTimeout(function () {
+    document.getElementById("myImage").src = "assets/images/dados.jpg";
+  }, 2000);
+}
+
 function carregarDados() {
   // Faz a requisição AJAX para buscar os dados do JSON
   var request = new XMLHttpRequest();
-  request.open("GET", "dados.json");
+  request.open("GET", "db/dados.json");
   request.onload = function () {
     if (request.status == 200) {
       dados = JSON.parse(request.responseText);
@@ -24,7 +31,6 @@ $(document).ready(function () {
   //já que você quer fazer o carregamento antecipado de tudo, pode fazer isso quando 
   //a página for carregada. Pode ser ruim fazer isso se forem muitos
   //arquivos e muito grandes.
-
   // Inicio fun audio
   $('.btnPlayAudio').each(function (e) {
     var url = $(this).attr('data-audiourl');
