@@ -52,7 +52,7 @@ function sortear() {
     resultado.innerHTML = `
        <p>
        <mark style=" background-color: #c48ded;">${rolagem1.acao}
-       </mark> 
+       </mark>
        <mark style=" background-color: #c48ded;">${rolagem2.onde}
        </mark>.
        </p>
