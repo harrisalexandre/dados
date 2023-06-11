@@ -35,6 +35,9 @@
         },
         {
             "acao": "Provoque seu amor com "
+        },
+        {
+            "acao": "chama_dado3"
         }
     ],
     "dado2": [

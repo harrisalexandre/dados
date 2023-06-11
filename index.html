@@ -1,15 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.84.0">
+  <meta name="author" content="@_harrisalexandre">
   <title>Sorteador</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/pricing/">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -58,10 +59,13 @@
               <img src="dados.jpg" alt="Dados" id="dados-img" class="img-fluid">
 
               <!-- Botão -->
-              <button type="button" class="w-100 btn btn-lg btn-primary" onclick="sortear()">Sortear</button>
+              <button type="button" data-audiourl="dados.mp3" class="btnPlayAudio w-100 btn btn-lg btn-primary"
+                onclick="sortear()">Sortear
+              </button>
 
               <!-- Resultado da rolagem -->
-              <div class="list-unstyled mt-3 mb-4" id="resultado" style="text-align: center;" class="fs-5 text-muted">
+              <div class="btnPlayAudio list-unstyled mt-3 mb-4" id="resultado" style="text-align: center;"
+                class="fs-5 text-muted">
               </div>
 
             </div>

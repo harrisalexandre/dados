@@ -33,13 +33,66 @@ function terceiraRolagem() {
    `;
 }
 
+var listaAudios = [];
+
+$(document).ready(function () {
+  //já que você quer fazer o carregamento antecipado de tudo, pode fazer isso quando 
+  //a página for carregada. Pode ser ruim fazer isso se forem muitos
+  //arquivos e muito grandes.
+
+  $('.btnPlayAudio').each(function (e) {
+    var url = $(this).attr('data-audiourl');
+    var audioPlay = new Audio(url);
+    audioPlay.preload = "auto";
+
+    var audioData = {
+      'url': $(this).attr('data-audiourl'),
+      'audioPlayObj': audioPlay
+    };
+
+    listaAudios.push(audioData);
+  });
+});
+
+$('.btnPlayAudio').click(function () {
+  var url = $(this).attr('data-audiourl');
+  for (var i = 0; i < listaAudios.length; i++) {
+    if (listaAudios[i].url == url) {
+      var audio = listaAudios[i].audioPlayObj;
+      audio.currentTime = 0;
+      audio.volume = 1;
+      audio.play();
+      break;
+    }
+  }
+});
+
+function stopAll() {
+  for (var i = 0; i < listaAudios.length; i++) {
+    listaAudios[i].audioPlayObj.pause();
+  }
+}
+
 function sortear() {
+
+  $('.audioplay').each(function (i) {
+    var audioplay = new Audio('dados.mp3');
+    audioplay.preload = "auto";
+    $(this).click(function (e) {
+      e.preventDefault();
+      audioplay.currentTime = 0;
+      audioplay.play();
+      audioplay.volume = 1;
+      $(this).data("audio-click");
+    });
+  });
+
   // Gera uma ação randômica
   const num1 = Math.floor(Math.random() * dado1.length);
   const rolagem1 = dado1[num1];
 
   // Verifica se o valor da primeira rolagem é igual a um valor específico
-  if (rolagem1.acao === "3") {
+  if (rolagem1.acao === "chama_dado3") {
     // Chama uma terceira função de rolagem
     terceiraRolagem();
   } else {
@@ -52,7 +105,7 @@ function sortear() {
     resultado.innerHTML = `
        <p>
        <mark style=" background-color: #c48ded;">${rolagem1.acao}
-       </mark>
+       </mark> 
        <mark style=" background-color: #c48ded;">${rolagem2.onde}
        </mark>.
        </p>
