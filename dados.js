@@ -28,7 +28,7 @@ function sortear() {
   // Exibe o resultado ao usuário
   const resultado = document.getElementById("resultado");
   resultado.innerHTML = `
-     <p>Faça 
+     <p>
      <mark style="border-radius: 5px; background-color: #c48ded;">${rolagem1.acao}
      </mark> em 
      <mark style="border-radius: 5px; background-color: #c48ded;">${rolagem2.onde}
