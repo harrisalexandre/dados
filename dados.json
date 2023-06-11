@@ -1,51 +1,48 @@
 {
     "dado1": [
         {
-            "acao": "farejar"
+            "acao": "Dê um cheiro em"
         },
         {
-            "acao": "tocar"
+            "acao": "Toque com"
         },
         {
-            "acao": "apertar"
+            "acao": "Aperte"
         },
         {
-            "acao": "morder"
+            "acao": "Morda"
         },
         {
-            "acao": "tapa"
+            "acao": "Dê um tapinha"
         },
         {
-            "acao": "beijar"
+            "acao": "Beije"
         },
         {
-            "acao": "lamber"
+            "acao": "Dê uma lambida"
         },
         {
-            "acao": "esfregar"
+            "acao": "Esfregue"
         },
         {
-            "acao": "massagem"
+            "acao": "Massageie"
         },
         {
-            "acao": "chupar"
+            "acao": "Chupe"
         },
         {
-            "acao": "cócegas"
+            "acao": "Faça cócegas em"
         },
         {
-            "acao": "tocar"
-        },
-        {
-            "acao": "provocar"
+            "acao": "Provoque seu amor com"
         }
     ],
     "dado2": [
         {
-            "onde": "boca"
+            "onde": "sua boca"
         },
         {
-            "onde": "seios"
+            "onde": "seus seios"
         },
         {
             "onde": "parte íntima"
@@ -63,22 +60,33 @@
             "onde": "barriga"
         },
         {
-            "onde": "coxa"
+            "onde": "sua coxa"
         },
         {
-            "onde": "mão"
+            "onde": "sua mão"
         },
         {
-            "onde": "orelha"
+            "onde": "sua orelha"
         },
         {
-            "onde": "pés"
+            "onde": "seus pés"
         },
         {
-            "onde": "pescoço"
+            "onde": "seu pescoço"
         },
         {
-            "onde": "dedo"
+            "onde": "um dedo"
+        }
+    ],
+    "dado3": [
+        {
+            "acao": "Diga a qualidade que mais gosta nele (a)"
+        },
+        {
+            "acao": "Parte do gosto que mais gosta nele (a)"
+        },
+        {
+            "acao": "Parte do gosto que mais gosta nele (a)"
         }
     ]
 }
