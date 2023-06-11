@@ -18,21 +18,6 @@ function carregarDados() {
   request.send();
 }
 
-function terceiraRolagem() {
-  // Gera uma terceira rolagem randômica
-  const num3 = Math.floor(Math.random() * dado3.length);
-  const rolagem3 = dado3[num3];
-
-  // Exibe o resultado ao usuário
-  const resultado = document.getElementById("resultado");
-  resultado.innerHTML = `
-     <p>
-     <mark style="background-color: #c48ded;">${rolagem3.acao}
-     </mark>.
-     </p>
-   `;
-}
-
 var listaAudios = [];
 
 $(document).ready(function () {
@@ -40,6 +25,7 @@ $(document).ready(function () {
   //a página for carregada. Pode ser ruim fazer isso se forem muitos
   //arquivos e muito grandes.
 
+  // Inicio fun audio
   $('.btnPlayAudio').each(function (e) {
     var url = $(this).attr('data-audiourl');
     var audioPlay = new Audio(url);
@@ -86,6 +72,22 @@ function sortear() {
       $(this).data("audio-click");
     });
   });
+
+  function terceiraRolagem() {
+    // Gera uma terceira rolagem randômica
+    const num3 = Math.floor(Math.random() * dado3.length);
+    const rolagem3 = dado3[num3];
+
+    // Exibe o resultado ao usuário
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = `
+     <p>
+     <mark style="background-color: #8dede9;">${rolagem3.acao}
+     </mark>.
+     </p>
+   `;
+  }
+  // Fim fun audio
 
   // Gera uma ação randômica
   const num1 = Math.floor(Math.random() * dado1.length);
